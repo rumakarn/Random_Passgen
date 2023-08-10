@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding: 0;
+    font: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+body{
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    color:#fff;
+}
+
+.container{
+    margin: 10%;
+    width: 90%;
+    max-width: 700px;
+}
+
+.display{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.container h1{
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.text-animate{
+    position: relative;
+    width: 32.8rem;
+  }
+
+.text-animate h1{
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--main-color);
+  background-image: linear-gradient(var(--main-color), #fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -33rem 0;
+  animation: homeBgChange 6s linear infinite;
+  animation-delay: 2s;
+  }
+
+.text-animate h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: homeCursorChange 6s linear infinite;
+    animation-delay: 2s;
+  }
+
+.display img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 1.75rem;
+    background: transparent;
+}
+
+.container button img{
+    width: 28px;
+    margin-right: 10px;
+}
+
+.container button{
+    border: 0;
+    outline: 0;
+    background: #019f55;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.container button:hover{
+  background: rgb(102, 208, 102);
+  color: rgb(21, 20, 20);
+  
+}
+/* keyframes */
+@keyframes homeBgChange {
+    0%,
+    10%,
+    100% {
+      background-position: -33rem 0;
+    }
+  
+    65%,
+    85% {
+      background-position: 0 0;
+    }
+  }
+  
+  @keyframes homeCursorChange {
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+  
+    65%,
+    78%,
+    85% {
+      width: 100%;
+      opacity: 1;
+    }
+  
+    75%,
+    81% {
+      opacity: 0;
+    }
+  }
